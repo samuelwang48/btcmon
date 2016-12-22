@@ -1,0 +1,49 @@
+{
+"exchanges": [
+  {
+    "name": "bitfinex",
+    "id": "",
+    "pwd": "",
+    "api": "https://api.bitfinex.com/v1",
+    "key": "",
+    "secret": ""
+  },
+  {
+    "name": "quoine",
+    "id": "",
+    "pwd": ""
+  },
+  {
+    "name": "btce",
+    "id": "",
+    "pwd": ""
+  },
+  {
+    "name": "gdax",
+    "memo": "pending verification, going to abandon",
+    "id": "",
+    "pwd": ""
+  },
+  {
+    "name": "gdax",
+    "memo": "pending verification",
+    "id": "",
+    "pwd": ""
+  },
+  {
+    "name": "okcoinintl",
+    "id": "",
+    "pwd": ""
+  },
+  {
+    "name": "bitstamp",
+    "id": "",
+    "pwd": ""
+  },
+  {
+    "name": "kraken",
+    "id": "",
+    "pwd": ""
+  }
+]
+}
