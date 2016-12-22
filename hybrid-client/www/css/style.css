@@ -1,0 +1,65 @@
+/* Empty. Add your own CSS if you like */
+
+.col {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.grey-num {
+  font-size: 70%;
+}
+.market-content .item {
+}
+.market-content .item-content {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.market-fieldname {
+  width: 80px;
+}
+.market-name {
+  width: 105px;
+  ^background: #f06;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.market-name .icon {
+  font-size:20px;
+  color: #bbb;
+  position: absolute;
+  margin-top: -2px;
+}
+.market-name .name-field {
+  margin-left: 10px;
+}
+.display-flex {
+  display: flex;
+  flex-direction: row;
+}
+.market-status {
+  float: right;
+  ^border: 1px solid #000;
+  margin-top: -20px;
+}
+.market-status .pair {
+  font-size: 15px;
+  ^border: 1px solid #f09;
+  text-align: right;
+}
+.market-status.display-flex .key {
+  display: none;
+}
+.market-status .value {
+  display: inline-block;
+  ^border: 1px solid #f90;
+}
+.pair.vol-percent {
+  width: 80px;
+}
+.pair.vol-btc {
+  width: 80px;
+}
+.pair.price-last {
+  width: 90px;
+}

@@ -1,0 +1,37 @@
+<ion-view view-title="Market" hide-nav-bar="true">
+  <ion-header-bar align-title="center" class="bar-dark">
+    <h1 class="title">All Markets</h1>
+    <!--
+    <button class="button">Position</button>
+    -->
+  </ion-header-bar>
+  <div class="bar bar-subheader">
+    <!--
+    <div class="buttons">
+      <button class="button button-dark"
+              ng-click="mkt.switchStreaming()">
+      {{mkt.isStreaming ? 'Streaming' : 'Stopped'}} ({{mkt.getUpdated()}})
+      </button>
+    </div>
+    -->
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <button class="button button-light market-fieldname">
+        Volume %
+      </button>
+      <button class="button button-light market-fieldname">
+        Volume ฿
+      </button>
+      <button class="button button-light market-fieldname">
+        Last
+      </button>
+    </div>
+  </div>
+  <ion-content class="has-subheader market-content">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="mkt.refresh();">
+    </ion-refresher>
+    <div ng-include="'market/list.html'"></div>
+  </ion-content>
+</ion-view>

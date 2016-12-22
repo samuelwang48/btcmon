@@ -1,0 +1,96 @@
+<ion-list>
+  <ion-item ng-repeat="ex in mkt.resources"
+            ng-click="mkt.actions(ex.display_name);">
+    <h2 class="market-name">
+      <i class="icon ion-key"></i>
+      <div class="name-field">{{ex.display_name}}</div>
+    </h2>
+    <div class="market-status display-flex">
+      <div class="pair vol-percent">
+        <span class="key">Volume %</span>
+        <span class="value">
+          <span>
+          {{
+            mkt.fixnum(ex.volume_percent)[0]
+          }}</span><span class="grey-num">.{{
+            mkt.fixnum(ex.volume_percent)[1]
+          }}</span> %
+        </span>
+      </div>
+      <div class="pair vol-btc">
+        <span class="key">Volume ฿</span>
+        <span class="value">
+          <span>
+          {{
+            mkt.fixnum(ex.volume_btc)[0]
+          }}</span><span class="grey-num">.{{
+            mkt.fixnum(ex.volume_btc)[1]
+          }}</span>
+        </span>
+      </div>
+      <div class="pair price-last">
+        <span class="key">Last</span>
+        <span class="value">
+          <span>
+          {{
+            mkt.fixnum(ex.rates.last)[0]
+          }}</span><span class="grey-num">.{{
+            mkt.fixnum(ex.rates.last)[1]
+          }}</span> USD
+        </span>
+      </div>
+    </div>
+    <!--
+    <p>...</p>
+    <ion-option-button class="button-calm"
+                       ng-click="">
+      Bind Key
+    </ion-option-button>
+    -->
+  </ion-item>
+</ion-list>
+<!--
+<table class="table market-list">
+  <thead/>
+  <tr>
+    <th>Exchange</th>
+    <th>Rate/Ask</th>
+    <th>Rate/Bid</th>
+    <th>Rate/Last</th>
+    <th>Volume BTC</th>
+    <th>Volume Percent</th>
+    <th>BTC (~=USD)</th>
+    <th>USD</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="ex in mkt.resources">
+    <td>{{ex.name}}</td>
+    <td>{{ex.rates.ask}}</td>
+    <td>
+      <span>{{ex.rates.bid}}</span>
+    </td>
+    <td>{{ex.rates.last}}</td>
+    <td>{{ex.volume_btc}}</td>
+    <td>{{ex.volume_percent}}</td>
+    <td>
+      {{mkt.exchanges[ex.name].exchange.btc.amount}}
+      {{
+        mkt.exchanges[ex.name].exchange.btc.amount > 0 ? '('+
+        mkt.ceil(mkt.exchanges[ex.name].exchange.btc.amount * ex.rates.last)+
+        ')' : ''
+      }}
+    </td>
+    <td>
+      {{
+        mkt.exchanges[ex.name].exchange.usd.available > 0 ?
+        mkt.ceil(mkt.exchanges[ex.name].exchange.usd.available) : ''
+      }}
+    </td>
+  </tr>
+  </tbody>
+</table>
+-->
+<!--
+<pre>{{mkt.resources | json}}</pre>
+-->
